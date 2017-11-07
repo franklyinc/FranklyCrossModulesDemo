@@ -7,7 +7,7 @@ class ModuleCrossDemo extends Component {
 	  
     return (
       <div className='FranklyModulesCrossDemo'>
-	      test
+	      <ModuleDemo>test2</ModuleDemo>
       </div>
     );
 	  
