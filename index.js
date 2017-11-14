@@ -11,6 +11,7 @@ class ModuleCrossDemo extends Component {
       <div className='FranklyModulesCrossDemo'>
 	    This is a child "ModuleDemo" component:<br/>
 	    <Dep></Dep>
+	    <folderTest></folderTest>
 	    {/* <ModuleDemo text="test"></ModuleDemo> --> */ }
       </div>
     );
