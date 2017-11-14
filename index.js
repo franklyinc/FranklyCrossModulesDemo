@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 // import ModuleDemo from 'franklyinc/FranklyModulesDemo';
+import Dep from './dep';
 
 class ModuleCrossDemo extends Component {
 
@@ -8,6 +9,7 @@ class ModuleCrossDemo extends Component {
     return (
       <div className='FranklyModulesCrossDemo'>
 	    This is a child "ModuleDemo" component:<br/>
+	    <Dep></Dep>
 	    {/* <ModuleDemo text="test"></ModuleDemo> --> */ }
       </div>
     );
