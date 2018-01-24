@@ -1,7 +1,7 @@
 {
   "thumbnail": "https://wnow-modules.s3.amazonaws.com/icon_stroke_news_articlelist.svg",
   "tag": "wnow",
-  "affiliates":["franklydemo","kotv"],
+  "affiliates":["franklydemo","kotv","test1"],
   "propTypes": {
     "text": "PropTypes.string"
   },
