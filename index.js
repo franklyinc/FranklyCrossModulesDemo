@@ -7,7 +7,7 @@ import React, { Component, PropTypes } from 'react';
 
 class ModuleCrossDemo extends Component {
 
-	ajax = (url,callback) => {
+  ajax = (url,callback) => {
     let req = new XMLHttpRequest();
     req.open('GET', url);
     req.onload = function() {
@@ -25,7 +25,7 @@ class ModuleCrossDemo extends Component {
 	
   componentWillMount () {
     if(typeof window === 'object'){
-      this.ajax(this.props.origin+ '?clienttype=container.json', (res)=>{
+      this.ajax('http://www.newson6.com/category/331247/school-shutdown-feed?clienttype=container.json', (res)=>{
         res = JSON.parse(res)
         console.log(res)
         this.setState({stories: res.features})
