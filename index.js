@@ -3,7 +3,7 @@ import React, { Component, PropTypes } from 'react';
 // import Dep from './dep';
 // import folderTest from './depFolder/folderTest';
 
-ajax1 = (url,callback) => {
+ajax = (url,callback) => {
     let req = new XMLHttpRequest();
     req.open('GET', url);
     req.onload = function() {
