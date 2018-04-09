@@ -40,10 +40,11 @@ class ModuleCrossDemo extends Component {
 	  
     return (
       <div className='FranklyModulesCrossDemo'>
-	    This is a child "ModuleDemo" component:<br/>
+	    {/* This is a child "ModuleDemo" component:<br/>*/ }
 	    {/* <<Dep></Dep> */ }
 	    {/* <<folderTest></folderTest> */ }
 	    {/* <ModuleDemo text="test"></ModuleDemo> */ }
+	    <pre>{JSON.stringify(this.state.stories)}</pre>
       </div>
     );
 	  
