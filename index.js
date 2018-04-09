@@ -70,7 +70,50 @@ componentDidMount () {
 	    {/* <ModuleDemo text="test"></ModuleDemo> */ }
 	    <pre>{this.props.text}</pre>
 	    <pre>{JSON.stringify(this.state)}</pre>
-	    
+
+
+
+    <div className='row overlaid-contents'>
+        <div className='col-sm-7 col-md-8 col-xs-12 left-column'>
+          <h1 className='main-title'>{this.props.title}</h1>
+        </div>
+        <div className=' col-sm-5 col-md-4 right-column hidden-xs '>
+          <div className='dark-opacity fill-all'>
+            <div className='right-column-contents'>
+              <div className='row'>
+                <div className='col-xs-12'>
+                  <a href='#' className='watch-live'>
+                    <span className='watch-live-text'>Watch Live</span>
+                    <span className='glyphicon glyphicon-play-circle' />
+                  </a>
+                </div>
+              </div>
+              {
+                this.state.stories.slice(0,1).map(function(s,i,a){ //in case the array is empty
+                  return(
+                    <div className='row secondary-story' key={i}>
+                      <div className='col-xs-12'>
+                        <a href={s.link}>
+                          <img className='img-responsive' src={s.abstractimage.filename } />
+                        </a>
+                      </div>
+                      <div className='col-xs-12 secondary-title-container'>
+                        <a href={s.link} className='secondary-title'>
+                          <span >{s.headline.replace(/<\/?[^>]+(>|$)/g, "")}</span>
+                        </a>
+                      </div>
+                      <div className='col-sm-12 hidden-sm secondary-subtitle'>
+                        <span>{s.abstract.replace(/<\/?[^>]+(>|$)/g, "") }</span>
+                      </div>
+                    </div>
+                  )
+                })
+              }
+
+
+
+
+
       </div>
     );
 	  
