@@ -3,7 +3,11 @@ import React, { Component, PropTypes } from 'react';
 // import Dep from './dep';
 // import folderTest from './depFolder/folderTest';
 
-ajax = (url,callback) => {
+
+
+class ModuleCrossDemo extends Component {
+
+	ajax = (url,callback) => {
     let req = new XMLHttpRequest();
     req.open('GET', url);
     req.onload = function() {
@@ -18,9 +22,20 @@ ajax = (url,callback) => {
     };
     req.send();
   }
+	
+  componentWillMount () {
+    if(typeof window === 'object'){
+      this.ajax(this.props.origin+ '?clienttype=container.json', (res)=>{
+        res = JSON.parse(res)
+        console.log(res)
+        this.setState({stories: res.features})
+      })
+    }
 
-class ModuleCrossDemo extends Component {
 
+  }
+	
+	
   render(){
 	  
     return (
