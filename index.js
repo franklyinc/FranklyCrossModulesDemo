@@ -6,7 +6,19 @@ import React, { Component, PropTypes } from 'react';
 
 
 class ModuleCrossDemo extends Component {
+  constructor (props) { // gives us acces to props, fires long before page load
+    super(props) // assigns props to this.props
 
+
+
+    this.imgUrl = 'http://ftpcontent.worldnow.com/kotv/test/don/build/';
+    this.state = {
+      stories: []
+    } /* great place to assign default state */;
+    this.stories = props.FRN_rawResponses;
+
+  }
+	
   ajax = (url,callback) => {
     let req = new XMLHttpRequest();
     req.open('GET', url);
