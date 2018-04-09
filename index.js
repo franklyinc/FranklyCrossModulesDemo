@@ -198,7 +198,7 @@ componentDidMount () {
 
 
 
-class HomePageTakeover extends Component {
+class ModuleCrossDemo extends Component {
   constructor (props) { // gives us acces to props, fires long before page load
     super(props) // assigns props to this.props
 
@@ -365,5 +365,5 @@ class HomePageTakeover extends Component {
   }
 }
 
-export default HomePageTakeover
-// export default ModuleCrossDemo;
+// export default HomePageTakeover
+export default ModuleCrossDemo
