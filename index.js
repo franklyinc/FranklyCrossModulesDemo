@@ -231,7 +231,7 @@ class ModuleCrossDemo extends Component {
 
   componentWillMount () {
     if(typeof window === 'object'){
-      this.ajax(this.props.origin+ '?clienttype=container.json', (res)=>{
+      this.ajax(this.props.origin+ 'http://www.newson6.com/category/331247/school-shutdown-feed?clienttype=container.json', (res)=>{
         res = JSON.parse(res)
         console.log(res)
         this.setState({stories: res.features})
