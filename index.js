@@ -73,7 +73,12 @@ componentDidMount () {
 
 
 
-    <div className='row overlaid-contents'>
+
+
+
+
+<div className='gnm-home-page-takeover'>
+      <div className='row overlaid-contents'>
         <div className='col-sm-7 col-md-8 col-xs-12 left-column'>
           <h1 className='main-title'>{this.props.title}</h1>
         </div>
@@ -109,6 +114,77 @@ componentDidMount () {
                   )
                 })
               }
+
+
+              {
+                this.state.stories.slice(1,4).map(function(s,i,a){
+                  return(
+                    <div key={i}>
+                      <div className='divider visible-sm-block' />
+                      <div className='row related-story '>
+                        <div className='col-xs-5 hidden-sm related-stories-photo-col'>
+                          <a href={s.link}>
+                            <img className='img-responsive' src={s.abstractimage.filename} />
+                          </a>
+                        </div>
+                        <div className='col-sm-12 col-md-7 related-stories-text-col'>
+                          <div className='row'>
+                            <div className='col-xs-12'>
+                              <a href={s.link} className='related-stories-title'>{s.headline.replace(/<\/?[^>]+(>|$)/g, "")}</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )
+                })
+              }
+            </div>
+            <div className='view-more'>
+              <div className='row'>
+                <div className='col-xs-12'>
+                  <a href={this.props.origin} >
+                    <span >More Stories</span>
+                    <span className='glyphicon glyphicon-chevron-right' />
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='main-image-container'>
+        <img className='main-image' src={this.props.photoUrl } />
+      </div>
+      <div className='row visible-xs-block dark-opacity xs-bottom-bar related-stories small'>
+
+        <div className='col-xs-12'>
+          <a href='#' className='watch-live'>
+            <span className='watch-live-text'>Watch Live</span>
+            <span className='glyphicon glyphicon-play-circle' />
+          </a>
+        </div>
+        {
+          this.state.stories.slice(0,3).map(function(s,i,a){
+            return(
+              <div key={i} className='col-xs-12 bottom-border'>
+                <a href={s.link}>{s.headline.replace(/<\/?[^>]+(>|$)/g, "")}</a>
+              </div>
+            )
+          })
+        }
+        <div className='view-more small'>
+          <a href='#' className='bottom-border'>
+            <span >View More</span>
+            <span className='glyphicon glyphicon-chevron-right' />
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+
 
 
 
