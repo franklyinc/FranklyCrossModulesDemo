@@ -44,7 +44,7 @@ class ModuleCrossDemo extends Component {
 	    {/* <<Dep></Dep> */ }
 	    {/* <<folderTest></folderTest> */ }
 	    {/* <ModuleDemo text="test"></ModuleDemo> */ }
-	    <pre>{this.state.stories}</pre>
+	    <pre>{this.state}</pre>
       </div>
     );
 	  
