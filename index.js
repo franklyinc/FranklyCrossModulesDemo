@@ -43,7 +43,22 @@ class ModuleCrossDemo extends Component {
 
 
   }
-	
+
+componentDidMount () {
+
+   }
+
+  componentWillReceiveProps (nextProps) {
+
+   }
+  shouldComponentUpdate (nextProps, nextState) { /* OPTIONAL, allows us to intelligently decide if we really need to re-render (BOOL) */
+    return true
+  }
+  componentWillUpdate (nextProps, nextState) { /* OPTIONAL (and cannot call setState in here) last opportunity to massage data before render */ }
+  componentDidUpdate (prevProps, prevState) { /* OPTIONAL Here we have access to the DOM again, */ }
+
+  componentWillUnmount () { /* GREAT place to kill any network requests, or any Timeout or Interval functions trying up resources. Last stop before we are destroyed.  */ }
+
 	
   render(){
 	  
