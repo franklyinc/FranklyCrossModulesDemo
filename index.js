@@ -52,7 +52,7 @@ class ModuleCrossDemo extends Component {
 	    {/* <<Dep></Dep> */ }
 	    {/* <<folderTest></folderTest> */ }
 	    {/* <ModuleDemo text="test"></ModuleDemo> */ }
-	    <pre></pre>
+	    <pre>{this.props.text}</pre>
       </div>
     );
 	  
