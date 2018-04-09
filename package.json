@@ -3,9 +3,11 @@
   "tag": "wnow",
   "affiliates":["franklydemo","kotv","test1"],
   "propTypes": {
-    "text": "PropTypes.string"
+    "text": "PropTypes.string",
+    "origin": "PropTypes.string"
   },
   "defaultProps": {
-    "text": "Welcome to the demo of Frankly Cross Modules!!"
+    "text": "Welcome to the demo of Frankly Cross Modules!!",
+    "origin": "http://www.newson6.com/category/331247/school-shutdown-feed"
   }
 }
